@@ -6,6 +6,8 @@
  	<title>Nikhita Zulka</title>
  	<link rel="stylesheet" type="text/css" href="style.css">
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 	<!-- Library for fonts -->
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
  </head>
  <body class="body">
@@ -14,9 +16,9 @@
  		<img src="images.png">
  		<nav>
  			<ul>
- 				<li><a href="#" class="active">Home</a></li>
- 				<li><a href="#" onclick="myFunction()">About</a></li>
- 				<li><a href="#second" class="links" id="first" >Contact</a></li>
+ 				<li><a href="#" class="active"><i class="fa fa-fw fa-home"></i>&nbsp;Home</a></li>
+ 				<li><a href="#" onclick="myFunction()"><i class="fa fa-fw fa-female"></i>&nbsp;About</a></li>
+ 				<li><a href="#second" class="links" id="first"><i class="fa fa-fw fa-address-book"></i>&nbsp;Contact</a></li>
 
  			</ul>
  		</nav>
@@ -80,40 +82,7 @@
  		<p> Copyright &copy; 2018 <a href="#">Nikhita Zulka</a></p>
  	</footer>
 	<div id="snackbar">Coming Soon</div>
- 	<script>
-		function myFunction() {
-		    var x = document.getElementById("snackbar");
-		    x.className = "show";
-		    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-		}
-
-		
-		$('document').ready(function(){
-
-		  // Add smooth scrolling to all links
-		  $(".links").on('click', function(event) {
-		  	//console.log("Clicked the link");
-
-		    // Make sure this.hash has a value before overriding default behavior
-		    if (this.hash !== "") {
-		      // Prevent default anchor click behavior
-		      event.preventDefault();
-
-		      // Store hash
-		      var hash = this.hash;
-
-		      // Using jQuery's animate() method to add smooth page scroll
-		      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-		      $('html, body').animate({
-		        scrollTop: $(hash).offset().top
-		      }, 800, function(){
-		   
-		        // Add hash (#) to URL when done scrolling (default click behavior)
-		        window.location.hash = hash;
-		      });
-		    } // End if
-		  });
-		});
+ 	<script src="script.js" type="text/javascript">
 	</script>
  
  </body>
