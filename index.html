@@ -1,0 +1,120 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	 <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<title>Nikhita Zulka</title>
+ 	<link rel="stylesheet" type="text/css" href="style.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+ </head>
+ <body class="body">
+ 	<!-- Create a header and a menu bar -->
+ 	<header class="mainHeader">
+ 		<img src="images.png">
+ 		<nav>
+ 			<ul>
+ 				<li><a href="#" class="active">Home</a></li>
+ 				<li><a href="#" onclick="myFunction()">About</a></li>
+ 				<li><a href="#second" class="links" id="first" >Contact</a></li>
+
+ 			</ul>
+ 		</nav>
+ 	</header>
+ 	<div class="mainContent">
+ 		<div class="content">
+ 			<article class="topContent">
+ 				<header>
+ 					<h2>
+ 						<a href="#" title="First Post">First Post</a>
+ 					</h2>
+ 				</header>
+ 			
+ 			<footer>
+ 				<p class="post-info">This Post is written by Nikx</p>
+ 			</footer>
+ 			<content>
+ 				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+ 				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+ 			</content>
+ 			</article>
+
+ 			<article class="bottomContent">
+ 				<header>
+ 					<h2>
+ 						<a href="#first" title="Second Post" id="second" class="links">Second Post</a>
+ 					</h2>
+ 				</header>
+ 			
+ 			<footer>
+ 				<p class="post-info">This Post is written by Nikx</p>
+ 			</footer>
+ 			<content>
+ 				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+ 				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+ 			</content>
+ 			</article>
+
+ 		</div>
+ 		
+ 	</div>
+ 	<aside class="top-sidebar">
+ 		<article>
+ 			<h2>Top Sidebar</h2>
+ 			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+ 		</article>
+ 	</aside>
+ 	<aside class="middle-sidebar">
+ 		<article>
+ 			<h2>Middle Sidebar</h2>
+ 			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+ 		</article>
+ 	</aside>
+	<aside class="bottom-sidebar">
+ 		<article>
+ 			<h2>Bottom Sidebar</h2>
+ 			<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+ 		</article>
+ 	</aside>
+ 	<footer class="mainFooter">
+ 		<p> Copyright &copy; 2018 <a href="#">Nikhita Zulka</a></p>
+ 	</footer>
+	<div id="snackbar">Coming Soon</div>
+ 	<script>
+		function myFunction() {
+		    var x = document.getElementById("snackbar");
+		    x.className = "show";
+		    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+		}
+
+		
+		$('document').ready(function(){
+
+		  // Add smooth scrolling to all links
+		  $(".links").on('click', function(event) {
+		  	//console.log("Clicked the link");
+
+		    // Make sure this.hash has a value before overriding default behavior
+		    if (this.hash !== "") {
+		      // Prevent default anchor click behavior
+		      event.preventDefault();
+
+		      // Store hash
+		      var hash = this.hash;
+
+		      // Using jQuery's animate() method to add smooth page scroll
+		      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+		      $('html, body').animate({
+		        scrollTop: $(hash).offset().top
+		      }, 800, function(){
+		   
+		        // Add hash (#) to URL when done scrolling (default click behavior)
+		        window.location.hash = hash;
+		      });
+		    } // End if
+		  });
+		});
+	</script>
+ 
+ </body>
+ </html>
